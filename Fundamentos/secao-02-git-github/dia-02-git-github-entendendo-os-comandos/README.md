@@ -1,0 +1,2 @@
+# Exercício do segundo dia da segunda seção do módulo sobre Fundamentos.
+## Neste exercício foram praticados os conceitos de: clonar um repositório remoto, criação de branchs, pulls, commits, pushs e merges/pull requests.
