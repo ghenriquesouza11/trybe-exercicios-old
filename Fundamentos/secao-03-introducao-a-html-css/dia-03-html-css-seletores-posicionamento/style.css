@@ -16,3 +16,7 @@ div:nth-of-type(4){
 div:nth-of-type(5){
     background: green;
 }
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    color: wheat;
+}
