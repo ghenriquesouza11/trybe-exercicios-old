@@ -24,3 +24,7 @@ li{
 li em{
     font-weight: bold;
 }
+ul:nth-of-type(1)
+li:nth-child(-n+3){
+    color: blue;
+}
