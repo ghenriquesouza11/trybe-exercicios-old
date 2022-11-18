@@ -31,3 +31,23 @@ li:nth-child(-n+3){
 .java{
     background: pink;
 }
+ul:nth-of-type(2) li:hover:nth-child(1) a{
+    font-weight: bold;
+    color: orange;
+}
+ul:nth-of-type(2) li:hover:nth-child(2) a{
+    font-weight: bold;
+    color: green;
+}
+ul:nth-of-type(2) li:hover:nth-child(3) a{
+    font-weight: bold;
+    color: black;
+}
+ul:nth-of-type(2) li:hover:nth-child(4) a{
+    font-weight: bold;
+    color: yellow;
+}
+ul:nth-of-type(2) li:hover:nth-child(5) a{
+    font-weight: bold;
+    color: green;
+}
