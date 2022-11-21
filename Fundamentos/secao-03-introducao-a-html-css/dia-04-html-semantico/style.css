@@ -59,6 +59,8 @@ body{
 }
 .mantis-shrimp-question{
     font-weight: 400;
+    display: block;
+    font-size: 0.8rem;
 }
 .mantis-shrimp_hr{
     width: 90%;
