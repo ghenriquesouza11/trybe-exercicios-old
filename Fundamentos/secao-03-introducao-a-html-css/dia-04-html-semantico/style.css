@@ -7,19 +7,30 @@
 .main-header_container{
     display: flex;
     justify-content: space-between;
+    padding: 8px;
+    background: black;
+    align-items: center;
 }
 .main-header_logo{
-    height: 30px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 1px solid orange;
+    background-image: url(images/mantis-shrimp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 10%;
 }
 .main-header_links{
     list-style: none;
+    margin: auto 0;
 }
 .main-header_link{
     display: inline-block;
 }
 .main-header_link a{
     text-decoration: none;
-    color: inherit;
-    vertical-align: middle;
-    margin: 0 5px;
+    color: white;
+    margin: 0 8px;
+    letter-spacing: 0.17rem;
 }
