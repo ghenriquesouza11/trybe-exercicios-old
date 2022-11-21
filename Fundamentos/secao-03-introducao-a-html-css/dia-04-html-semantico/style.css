@@ -3,3 +3,23 @@
     margin: 0;
     padding: 0;
 }
+/* Navbar */
+.main-header_container{
+    display: flex;
+    justify-content: space-between;
+}
+.main-header_logo{
+    height: 30px;
+}
+.main-header_links{
+    list-style: none;
+}
+.main-header_link{
+    display: inline-block;
+}
+.main-header_link a{
+    text-decoration: none;
+    color: inherit;
+    vertical-align: middle;
+    margin: 0 5px;
+}
