@@ -37,3 +37,10 @@
     margin: 0 8px;
     letter-spacing: 0.17rem;
 }
+.main-header_link a:hover{
+    color: #A9A9A9;
+}
+.main-header_title{
+    ffont-family: 'Abhaya Libre', serif;
+    text-align: center;
+}
