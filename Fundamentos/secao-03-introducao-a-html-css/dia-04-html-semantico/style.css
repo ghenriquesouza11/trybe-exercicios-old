@@ -95,8 +95,9 @@ body{
     transform: translate(-50%);
     margin-top: 100px;
 }
-.mantis-shrimp-section_text{
+.mantis-shrimp-section_subtitle{
     font-family: 'Brawler', serif;
+    margin-bottom: 20px;
 }
 .mantis-shrimp-section_classification{
     list-style: none;
@@ -141,4 +142,25 @@ body{
 }
 .fun-facts{
     margin-top: 50px;
+}
+.fact-name{
+    height: 10rem;
+    width: 10rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+.fact-name_header{
+    display: flex;
+    padding: 5px;
+}
+.fact-name_header hr {
+    width: 70%;
+    border: 0;
+    height: 1px;
+    background: black;
+    margin: auto;
+}
+.fact-name_header h3{
+    margin: auto;
 }
