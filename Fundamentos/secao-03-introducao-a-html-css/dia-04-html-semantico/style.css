@@ -16,6 +16,7 @@ body{
     padding: 8px;
     background: black;
     align-items: center;
+    z-index: 1;
 }
 .main-header_logo{
     height: 45px;
@@ -72,4 +73,24 @@ body{
 .main-header_title{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+}
+.mantis-shrimp-section{
+    margin-top: 20px;
+}
+.mantis-shrimp-section_article{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
+}
+.mantis-shrimp-section_article > *{
+    grid-column: 2;
+}
+.mantis-shrimp-section_text{
+    font-family: 'Brawler', serif;
+}
+.mantis-shrimp-section_classification{
+    list-style: none;
+}
+.mantis-shrimp-section_classification li{
+    display: inline-block;
 }
