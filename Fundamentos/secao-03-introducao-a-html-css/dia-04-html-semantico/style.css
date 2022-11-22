@@ -5,12 +5,14 @@
 }
 body{
     background-color: #EFF5F5;
+    padding-top: 55px;
 }
 /* Navbar */
 .main-header_container{
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 8px;
@@ -177,7 +179,7 @@ body{
     flex-direction: row-reverse;
 }
 .fun-facts_container:nth-of-type(even) .fact-name{
-    background-color: #FF9F9F;
+    background-color: #FFD1D1;
 }
 .fun-facts_container:nth-of-type(odd) .fact-name{
     background-color: #D0B8A8;
