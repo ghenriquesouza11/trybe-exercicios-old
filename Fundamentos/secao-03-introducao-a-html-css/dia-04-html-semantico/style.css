@@ -58,7 +58,7 @@ body{
 .mantis-shrimp-photo{
     height: 350px;
 }
-.mantis-shrimp-question{
+.img-description{
     font-weight: 400;
     display: block;
     font-size: 0.8rem;
@@ -84,6 +84,13 @@ body{
 }
 .mantis-shrimp-section_article > *{
     grid-column: 2;
+}
+.mantis-shrimp-section_article img{
+    height: 350px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 20px;
 }
 .mantis-shrimp-section_text{
     font-family: 'Brawler', serif;
@@ -119,4 +126,10 @@ body{
 }
 .order{
     background-color: #FFD124;
+}
+.img-container{
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
 }
