@@ -124,9 +124,15 @@ body{
 .order{
     background-color: #FFD124;
 }
+.stfc-name{
+    background-color: #F5D5AE;
+}
 .img-container{
     display: inline-block;
     position: relative;
     left: 50%;
     transform: translate(-50%);
+}
+.fun-facts{
+    margin-top: 50px;
 }
