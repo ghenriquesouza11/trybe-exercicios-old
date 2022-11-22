@@ -164,3 +164,8 @@ body{
 .fact-name_header h3{
     margin: auto;
 }
+.fun-facts-fact{
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
