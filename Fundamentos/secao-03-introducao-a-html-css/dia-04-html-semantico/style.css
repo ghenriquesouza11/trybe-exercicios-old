@@ -143,12 +143,16 @@ body{
 .fun-facts{
     margin-top: 50px;
 }
+.fun-facts_container{
+   display: flex;
+   width: 100%;
+   margin-top: 50px;
+}
 .fact-name{
-    height: 10rem;
-    width: 10rem;
+    height: 160px;
+    width: 160px;
     border: 2px solid black;
     border-radius: 5px;
-    margin-top: 50px;
 }
 .fact-name_header{
     display: flex;
@@ -168,4 +172,20 @@ body{
     text-align: center;
     font-weight: 600;
     font-size: 1.3rem;
+}
+.fun-facts_container:nth-of-type(odd){
+    flex-direction: row-reverse;
+}
+.fun-facts_container:nth-of-type(even) .fact-name{
+    background-color: #FF9F9F;
+}
+.fun-facts_container:nth-of-type(odd) .fact-name{
+    background-color: #D0B8A8;
+}
+.fun-facts_container:nth-of-type(even) .text-info{
+    text-align: right;
+} 
+.fun-facts_container .text-info{
+    max-width: 70%;
+    margin: auto 0;
 }
