@@ -93,4 +93,30 @@ body{
 }
 .mantis-shrimp-section_classification li{
     display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.mantis-shrimp-section_item{
+    text-align: center;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.kingdom{
+    background-color: #EB6440;
+}
+.phylum{
+    background-color: #497174;
+}
+.subphylum{
+    background-color: #829460;
+}
+.class{
+    background-color: #C47AFF;
+}
+.subclass{
+    background-color: #009EFF;
+}
+.order{
+    background-color: #FFD124;
 }
