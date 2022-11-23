@@ -62,7 +62,7 @@ body {
   display: block;
   font-size: 0.8rem;
 }
-.mantis-shrimp_hr {
+.hr {
   width: 90%;
   margin: 50px auto;
   background-color: #a9a9a9;
@@ -142,6 +142,7 @@ body {
   left: 50%;
   transform: translate(-50%);
 }
+/* Fun Facts */
 .fun-facts {
   margin-top: 50px;
 }
