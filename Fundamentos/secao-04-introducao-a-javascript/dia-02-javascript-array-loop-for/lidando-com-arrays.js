@@ -64,10 +64,23 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // console.log(menorNumero);
 
 // cria um novo array de 1 a 25 usando for loop
+// let novoArray = [];
+// let n = 0;
+// for (index2 = 0; novoArray.length < 25; index2++) {
+//   novoArray.push(n + 1);
+//   n += 1;
+// }
+// console.log(novoArray);
+
 let novoArray = [];
 let n = 0;
-for (index2 = 0; novoArray.length < 25; index2++) {
+for (index = 0; novoArray.length < 25; index++) {
   novoArray.push(n + 1);
   n += 1;
 }
-console.log(novoArray);
+// console.log(novoArray);
+
+for (index = 0; index < novoArray.length; index++) {
+  let divisao = novoArray[index] / 2;
+  console.log(divisao);
+}
