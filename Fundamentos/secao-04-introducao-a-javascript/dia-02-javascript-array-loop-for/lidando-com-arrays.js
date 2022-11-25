@@ -53,3 +53,12 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // } else {
 //   console.log(numerosImpares);
 // }
+
+// Imprime o maior número do array
+let menorNumero = numbers[0];
+for (index = 0; index < numbers.length; index++) {
+  if (menorNumero >= numbers[index]) {
+    menorNumero = numbers[index];
+  }
+}
+console.log(menorNumero);
