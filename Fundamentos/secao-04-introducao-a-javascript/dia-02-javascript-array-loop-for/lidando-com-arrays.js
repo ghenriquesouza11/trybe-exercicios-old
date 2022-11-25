@@ -12,10 +12,21 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 //     }
 // console.log(soma);
 
-var soma = 0;
+// Calcula a média aritimética entre os valores do array
+// var soma = 0;
+// for (index = 0; index < numbers.length; index++) {
+//   soma = soma + numbers[index];
+// }
+// var media = soma / numbers.length;
+// console.log(media);
 
+var soma = 0;
 for (index = 0; index < numbers.length; index++) {
   soma = soma + numbers[index];
 }
 var media = soma / numbers.length;
-console.log(media);
+if (media > 20) {
+  console.log("valor maior que 20");
+} else if (media < 20) {
+  console.log("valor menor que 20");
+}
