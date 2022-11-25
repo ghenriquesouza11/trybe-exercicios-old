@@ -54,11 +54,20 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 //   console.log(numerosImpares);
 // }
 
-// Imprime o maior número do array
-let menorNumero = numbers[0];
-for (index = 0; index < numbers.length; index++) {
-  if (menorNumero >= numbers[index]) {
-    menorNumero = numbers[index];
-  }
+// Imprime o menor número do array
+// let menorNumero = numbers[0];
+// for (index = 0; index < numbers.length; index++) {
+//   if (menorNumero >= numbers[index]) {
+//     menorNumero = numbers[index];
+//   }
+// }
+// console.log(menorNumero);
+
+// cria um novo array de 1 a 25 usando for loop
+let novoArray = [];
+let n = 0;
+for (index2 = 0; novoArray.length < 25; index2++) {
+  novoArray.push(n + 1);
+  n += 1;
 }
-console.log(menorNumero);
+console.log(novoArray);
