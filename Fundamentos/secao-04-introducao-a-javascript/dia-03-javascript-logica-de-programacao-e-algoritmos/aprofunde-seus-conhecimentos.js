@@ -6,10 +6,23 @@
 // }
 // console.log(fatorial);
 
-let word = "tryber";
-let palavraInvertida = [];
-let teste = word.length;
-for (index = word.length - 1; index >= 0; index--) {
-  palavraInvertida.push(word[index]);
+// let word = "tryber";
+// let palavraInvertida = [];
+// let teste = word.length;
+// for (index = word.length - 1; index >= 0; index--) {
+//   palavraInvertida.push(word[index]);
+// }
+// console.log(palavraInvertida);
+
+let array = ["java", "javascript", "python", "html", "css"];
+bigger = 0;
+maiorPalavra = " ";
+for (index = 0; index < array.length; index++) {
+  let palavraAtual = array[index];
+  let parametro = array[index].length;
+  if (parametro > bigger) {
+    bigger = parametro;
+    maiorPalavra = palavraAtual;
+  }
 }
-console.log(palavraInvertida);
+console.log(maiorPalavra);
