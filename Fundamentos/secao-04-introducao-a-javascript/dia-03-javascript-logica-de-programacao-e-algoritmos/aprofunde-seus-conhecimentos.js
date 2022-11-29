@@ -14,15 +14,27 @@
 // }
 // console.log(palavraInvertida);
 
+// let array = ["java", "javascript", "python", "html", "css"];
+// bigger = 0;
+// maiorPalavra = " ";
+// for (index = 0; index < array.length; index++) {
+//   let palavraAtual = array[index];
+//   let parametro = array[index].length;
+//   if (parametro > bigger) {
+//     bigger = parametro;
+//     maiorPalavra = palavraAtual;
+//   }
+// }
+// console.log(maiorPalavra);
+
 let array = ["java", "javascript", "python", "html", "css"];
-bigger = 0;
-maiorPalavra = " ";
+// let smaller = 0;
+let menorPalavra = " ";
 for (index = 0; index < array.length; index++) {
+  let smaller = array[index].length;
   let palavraAtual = array[index];
-  let parametro = array[index].length;
-  if (parametro > bigger) {
-    bigger = parametro;
-    maiorPalavra = palavraAtual;
+  if (palavraAtual.length <= smaller) {
+    menorPalavra = palavraAtual;
   }
 }
-console.log(maiorPalavra);
+console.log(menorPalavra);
