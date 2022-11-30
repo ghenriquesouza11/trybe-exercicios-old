@@ -3,10 +3,16 @@ let info = {
   origem: "Pato Donald",
   nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
 };
-console.log("Bem-vinda,", info.personagem, "");
-info["recorrente"] = "Sim";
-console.log(info.recorrente);
+
+// console.log("Bem-vinda,", info.personagem, "");
+// info["recorrente"] = "Sim";
+// console.log(info.recorrente);
+
+// for (index = 0; index < Object.keys(info).length; index++) {
+//   let keyName = Object.keys(info)[index];
+//   console.log(keyName);
+// }
+
 for (index = 0; index < Object.keys(info).length; index++) {
-  let keyName = Object.keys(info)[index];
-  console.log(keyName);
+  console.log(Object.values(info)[index]);
 }
