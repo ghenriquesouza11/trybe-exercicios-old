@@ -76,11 +76,28 @@
 // }
 // maisRepetido([2, 3, 2, 5, 8, 2, 3]);
 
-function somatorio(numero) {
-  let soma = 0;
-  for (index = 1; index <= numero; index++) {
-    soma = soma + index;
+// function somatorio(numero) {
+//   let soma = 0;
+//   for (index = 1; index <= numero; index++) {
+//     soma = soma + index;
+//   }
+//   console.log(soma);
+// }
+// somatorio(5);
+
+function final(stringWord, endWord) {
+  let x = endWord.length - 1;
+  let y = 0;
+  for (index = stringWord.length - 1; index > endWord.length - 1; index--) {
+    if (stringWord[index] == endWord[x]) {
+      y += 1;
+    }
+    x = x - 1;
   }
-  console.log(soma);
+  if (y == endWord.length) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
 }
-somatorio(5);
+final("trybe", "be");
