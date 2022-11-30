@@ -28,19 +28,30 @@
 // }
 // maiorIndice([2, 3, 6, 7, 10, 1]);
 
-function menorIndice(array) {
-  let menorValor = 0;
+// function menorIndice(array) {
+//   let menorValor = 0;
+//   for (index = 0; index < array.length; index++) {
+//     if (menorValor >= array[index]) {
+//       menorValor = array[index];
+//     }
+//   }
+//   let menorValorIndice = 0;
+//   for (index = 0; index < array.length; index++) {
+//     if (menorValor == array[index]) {
+//       menorValorIndice = index;
+//     }
+//   }
+//   console.log(menorValorIndice);
+// }
+// menorIndice([2, 4, 6, 7, 10, 0, -3]);
+
+function maiorNome(array) {
+  let bigger = "";
   for (index = 0; index < array.length; index++) {
-    if (menorValor >= array[index]) {
-      menorValor = array[index];
+    if (array[index].length >= bigger.length) {
+      bigger = array[index];
     }
   }
-  let menorValorIndice = 0;
-  for (index = 0; index < array.length; index++) {
-    if (menorValor == array[index]) {
-      menorValorIndice = index;
-    }
-  }
-  console.log(menorValorIndice);
+  console.log(bigger);
 }
-menorIndice([2, 4, 6, 7, 10, 0, -3]);
+maiorNome(["José", "Lucas", "Nádia", "Fernanda", "Cairo", "Joana"]);
