@@ -27,14 +27,38 @@
 // }
 // console.log(maiorPalavra);
 
-let array = ["java", "javascript", "python", "html", "css"];
-// let smaller = 0;
-let menorPalavra = " ";
-for (index = 0; index < array.length; index++) {
-  let smaller = array[index].length;
-  let palavraAtual = array[index];
-  if (palavraAtual.length <= smaller) {
-    menorPalavra = palavraAtual;
+// let array = ["java", "javascript", "python", "html", "css"];
+// // let smaller = 0;
+// let menorPalavra = " ";
+// for (index = 0; index < array.length; index++) {
+//   let smaller = array[index].length;
+//   let palavraAtual = array[index];
+//   if (palavraAtual.length <= smaller) {
+//     menorPalavra = palavraAtual;
+//   }
+// }
+// console.log(menorPalavra);
+
+let x = 0;
+const numerosPrimos = [];
+for (number = 1; number <= 50; number++) {
+  for (index = 1; index <= number; index++) {
+    for (indexMultiplo = 1; indexMultiplo <= number; indexMultiplo++) {
+      if (index * indexMultiplo == number) {
+        x += 1;
+      }
+    }
+  }
+  if (x == 2) {
+    numerosPrimos.push(number);
+  }
+  x = 0;
+}
+let bigger = 0;
+for (index = 0; index <= numerosPrimos.length; index++) {
+  if (numerosPrimos[index] >= bigger) {
+    bigger = numerosPrimos[index];
   }
 }
-console.log(menorPalavra);
+// console.log(numerosPrimos);
+console.log(bigger);
