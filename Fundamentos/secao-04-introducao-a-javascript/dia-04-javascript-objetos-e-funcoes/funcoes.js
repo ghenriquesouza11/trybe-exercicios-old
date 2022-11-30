@@ -9,20 +9,38 @@
 //     console.log(false);
 //   }
 // }
+// palindromo("arara");
 
-function maiorIndice(array) {
-  let maiorValor = 0;
+// function maiorIndice(array) {
+//   let maiorValor = 0;
+//   for (index = 0; index < array.length; index++) {
+//     if (array[index] >= maiorValor) {
+//       maiorValor = array[index];
+//     }
+//   }
+//   let maiorValorIndice = 0;
+//   for (index = 0; index < array.length; index++) {
+//     if (maiorValor == array[index]) {
+//       maiorValorIndice = index;
+//     }
+//   }
+//   console.log(maiorValorIndice);
+// }
+// maiorIndice([2, 3, 6, 7, 10, 1]);
+
+function menorIndice(array) {
+  let menorValor = 0;
   for (index = 0; index < array.length; index++) {
-    if (array[index] >= maiorValor) {
-      maiorValor = array[index];
+    if (menorValor >= array[index]) {
+      menorValor = array[index];
     }
   }
-  let maiorValorIndice = 0;
+  let menorValorIndice = 0;
   for (index = 0; index < array.length; index++) {
-    if (maiorValor == array[index]) {
-      maiorValorIndice = index;
+    if (menorValor == array[index]) {
+      menorValorIndice = index;
     }
   }
-  console.log(maiorValorIndice);
+  console.log(menorValorIndice);
 }
-maiorIndice([2, 3, 6, 7, 10, 1]);
+menorIndice([2, 4, 6, 7, 10, 0, -3]);
