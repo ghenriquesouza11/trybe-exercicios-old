@@ -45,13 +45,33 @@
 // }
 // menorIndice([2, 4, 6, 7, 10, 0, -3]);
 
-function maiorNome(array) {
-  let bigger = "";
+// function maiorNome(array) {
+//   let bigger = "";
+//   for (index = 0; index < array.length; index++) {
+//     if (array[index].length >= bigger.length) {
+//       bigger = array[index];
+//     }
+//   }
+//   console.log(bigger);
+// }
+// maiorNome(["José", "Lucas", "Nádia", "Fernanda", "Cairo", "Joana"]);
+
+function maisRepetido(array) {
+  let x = -1;
+  let y = 0;
+  let numeroMaisRepetido = 0;
   for (index = 0; index < array.length; index++) {
-    if (array[index].length >= bigger.length) {
-      bigger = array[index];
+    for (index2 = 0; index2 < array.length; index2++) {
+      if (array[index] == array[index2]) {
+        x += 1;
+      }
     }
+    if (x > y) {
+      numeroMaisRepetido = array[index];
+    }
+    y = x;
+    x = -1;
   }
-  console.log(bigger);
+  console.log(numeroMaisRepetido);
 }
-maiorNome(["José", "Lucas", "Nádia", "Fernanda", "Cairo", "Joana"]);
+maisRepetido([2, 3, 2, 5, 8, 2, 3]);
