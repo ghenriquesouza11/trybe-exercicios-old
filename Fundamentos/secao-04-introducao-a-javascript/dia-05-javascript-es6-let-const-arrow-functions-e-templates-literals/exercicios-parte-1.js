@@ -33,7 +33,13 @@
 // let b = 5;
 // console.log(`O resultado da soma de  ${a} + ${b} é: ${soma(a, b)}`);
 
-numeroAleatorio = () => {
-  return Math.random();
+// const numeroAleatorio = () => {
+//   return Math.random();
+// };
+// console.log(numeroAleatorio());
+
+hello = (nome) => {
+  return `Olá, ${nome}!`;
 };
-console.log(numeroAleatorio());
+const nome = "Ivan";
+console.log(hello(nome));
