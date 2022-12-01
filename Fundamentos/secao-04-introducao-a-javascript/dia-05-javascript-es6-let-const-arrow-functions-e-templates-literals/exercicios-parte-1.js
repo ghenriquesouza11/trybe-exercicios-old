@@ -38,8 +38,15 @@
 // };
 // console.log(numeroAleatorio());
 
-hello = (nome) => {
-  return `Olá, ${nome}!`;
+// hello = (nome) => {
+//   return `Olá, ${nome}!`;
+// };
+// const nome = "Ivan";
+// console.log(hello(nome));
+
+nomeCompleto = (nome, sobrenome) => {
+  return `${nome} ${sobrenome}`;
 };
-const nome = "Ivan";
-console.log(hello(nome));
+let nome = "Ivan";
+let sobrenome = "Pires";
+console.log(nomeCompleto(nome, sobrenome));
