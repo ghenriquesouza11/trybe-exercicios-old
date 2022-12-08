@@ -15,8 +15,15 @@ function upperCaseText(selector) {
   selector.style.textTransform = "uppercase";
 }
 
+function showP() {
+  for (let index = 0; index < paragraph.length; index++) {
+    console.log(paragraph[index].textContent);
+  }
+}
+
 changeText(paragraph[1], "Mais culto e mais rico.");
 changeBackgroundColor(mainContent[0], "rgb(76,164,109)");
 changeBackgroundColor(centerContent[0], "white");
 changeText(h1[0], "Desafio - JavaScript");
 upperCaseText(paragraph[0]);
+showP();
