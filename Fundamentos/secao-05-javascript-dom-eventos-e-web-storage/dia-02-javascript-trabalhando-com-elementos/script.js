@@ -8,3 +8,6 @@ function createInsertChild(father, child, clss) {
 }
 createInsertChild(body, "h1");
 h1[0].innerHTML = "TrybeTrip - Agência de Viagens";
+createInsertChild(body, "main", "main-content");
+const main = document.getElementsByTagName("main");
+createInsertChild(main[0], "section", "center-content");
