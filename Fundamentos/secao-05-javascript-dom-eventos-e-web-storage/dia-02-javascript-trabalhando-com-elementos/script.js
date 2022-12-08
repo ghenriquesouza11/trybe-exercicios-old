@@ -6,3 +6,5 @@ function createInsertChild(father, child, clss) {
   father.appendChild(newchild);
   newchild.classList.add(clss);
 }
+createInsertChild(body, "h1");
+h1[0].innerHTML = "TrybeTrip - Agência de Viagens";
