@@ -20,7 +20,8 @@ createInsertChild(main[0], "section", "right-content");
 const leftContent = document.getElementsByClassName("left-content");
 createInsertChild(leftContent[0], "img", "small-image");
 const smallImage = document.getElementsByClassName("small-image");
-smallImage[0].src = "https://picsum.photos/200";
+smallImage[0].src =
+  "https://i.picsum.photos/id/1044/200/200.jpg?hmac=HB3e6tTss6J_9wexZ1v1psMlccdyQIrHrrijUgWXFhg";
 const rightContent = document.getElementsByClassName("right-content");
 createInsertChild(rightContent[0], "ul");
 const ul = document.getElementsByTagName("ul");
@@ -42,4 +43,7 @@ const writtenNumbers = [
 ];
 for (index = 0; index < 10; index += 1) {
   li[index].innerHTML = writtenNumbers[index];
+}
+for (index = 0; index < 3; index += 1) {
+  createInsertChild(main[0], "h3");
 }
