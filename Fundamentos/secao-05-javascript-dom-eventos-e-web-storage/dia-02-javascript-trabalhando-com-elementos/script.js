@@ -21,3 +21,25 @@ const leftContent = document.getElementsByClassName("left-content");
 createInsertChild(leftContent[0], "img", "small-image");
 const smallImage = document.getElementsByClassName("small-image");
 smallImage[0].src = "https://picsum.photos/200";
+const rightContent = document.getElementsByClassName("right-content");
+createInsertChild(rightContent[0], "ul");
+const ul = document.getElementsByTagName("ul");
+for (index = 0; index < 10; index += 1) {
+  createInsertChild(ul[0], "li");
+}
+const li = document.getElementsByTagName("li");
+const writtenNumbers = [
+  "um",
+  "dois",
+  "três",
+  "quatro",
+  "cinco",
+  "seis",
+  "sete",
+  "oito",
+  "nove",
+  "dez",
+];
+for (index = 0; index < 10; index += 1) {
+  li[index].innerHTML = writtenNumbers[index];
+}
