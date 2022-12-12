@@ -28,12 +28,14 @@ const decemberDaysList = [
 ];
 const daysList = document.getElementById("days");
 const buttonsContainer = document.getElementsByClassName("buttons-container");
+const holidayButton = document.getElementsByClassName("btn-holiday");
+const holidayDays = document.getElementsByClassName("holiday");
 
 function insertLi(list, times, clss) {
   for (index = 0; index < times; index += 1) {
     const li = document.createElement("li");
     list.appendChild(li);
-    list.children[index].setAttribute("id", clss);
+    list.children[index].classList.add(clss);
   }
 }
 function createInsertChild(father, child, idx, clss, content) {
@@ -55,3 +57,17 @@ daysList.children[12].classList.add("friday");
 daysList.children[19].classList.add("friday");
 daysList.children[26].classList.add("friday");
 createInsertChild(buttonsContainer[0], "button", 0, "btn-holiday", "Feriados");
+let active = "no";
+holidayButton[0].addEventListener("click", function () {
+  if (active === "no") {
+    for (index = 0; index < holidayDays.length; index += 1) {
+      holidayDays[index].style.background = "orange";
+    }
+    active = "yes";
+  } else if (active === "yes") {
+    for (index = 0; index < holidayDays.length; index += 1) {
+      holidayDays[index].style.background = "rgb(238,238,238)";
+    }
+    active = "no";
+  }
+});
