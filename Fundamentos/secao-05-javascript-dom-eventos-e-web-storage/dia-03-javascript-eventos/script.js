@@ -27,9 +27,10 @@ const decemberDaysList = [
   21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
 ];
 const daysList = document.getElementById("days");
-function insertLi(list, times) {
+function insertLi(list, times, clss) {
   for (index = 0; index < times; index += 1) {
     const li = document.createElement("li");
     list.appendChild(li);
+    list.children[index].classList.add(clss);
   }
 }
