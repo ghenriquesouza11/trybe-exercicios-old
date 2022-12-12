@@ -27,12 +27,21 @@ const decemberDaysList = [
   21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
 ];
 const daysList = document.getElementById("days");
+const buttonsContainer = document.getElementsByClassName("buttons-container");
+
 function insertLi(list, times, clss) {
   for (index = 0; index < times; index += 1) {
     const li = document.createElement("li");
     list.appendChild(li);
-    list.children[index].classList.add(clss);
+    list.children[index].setAttribute("id", clss);
   }
+}
+function createInsertChild(father, child, idx, clss, content) {
+  const newElement = document.createElement(child);
+  father.appendChild(newElement);
+  const kid = father.children[idx];
+  kid.innerHTML = content;
+  newElement.classList.add(clss);
 }
 insertLi(daysList, decemberDaysList.length, "day");
 for (index = 0; index < decemberDaysList.length; index += 1) {
@@ -45,3 +54,4 @@ daysList.children[5].classList.add("friday");
 daysList.children[12].classList.add("friday");
 daysList.children[19].classList.add("friday");
 daysList.children[26].classList.add("friday");
+createInsertChild(buttonsContainer[0], "button", 0, "btn-holiday", "Feriados");
