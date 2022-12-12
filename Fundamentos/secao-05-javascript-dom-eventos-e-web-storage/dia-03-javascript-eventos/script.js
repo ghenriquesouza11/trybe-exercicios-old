@@ -30,6 +30,8 @@ const daysList = document.getElementById("days");
 const buttonsContainer = document.getElementsByClassName("buttons-container");
 const holidayButton = document.getElementsByClassName("btn-holiday");
 const holidayDays = document.getElementsByClassName("holiday");
+const fridayButton = document.getElementsByClassName("btn-friday");
+const fridays = document.getElementsByClassName("friday");
 
 function insertLi(list, times, clss) {
   for (index = 0; index < times; index += 1) {
@@ -61,7 +63,7 @@ let btnHolidayActive = "no";
 holidayButton[0].addEventListener("click", function () {
   if (btnHolidayActive === "no") {
     for (index = 0; index < holidayDays.length; index += 1) {
-      holidayDays[index].style.background = "orange";
+      holidayDays[index].style.background = "white";
     }
     btnHolidayActive = "yes";
   } else if (btnHolidayActive === "yes") {
@@ -78,3 +80,18 @@ createInsertChild(
   "btn-friday",
   "Sexta-Feira"
 );
+let fridayButtonActive = "no";
+fridayButton[0].addEventListener("click", function () {
+  if (fridayButtonActive === "no") {
+    for (index = 5; index < daysList.children.length; index += 7) {
+      daysList.children[index].innerHTML = "SEXTOU o/";
+    }
+    fridayButtonActive = "yes";
+  } else if (fridayButtonActive === "yes") {
+    for (index = 5; index < daysList.children.length; index += 7) {
+      daysList.children[index].innerHTML = index - 1;
+    }
+    fridayButtonActive = "no";
+  }
+});
+console.log(daysList.children.length);
