@@ -34,3 +34,10 @@ function insertLi(list, times, clss) {
     list.children[index].classList.add(clss);
   }
 }
+insertLi(daysList, decemberDaysList.length, "day");
+for (index = 0; index < decemberDaysList.length; index += 1) {
+  daysList.children[index].innerHTML = decemberDaysList[index];
+}
+daysList.children[25].classList.add("holiday");
+daysList.children[26].classList.add("holiday");
+daysList.children[32].classList.add("holiday");
