@@ -57,17 +57,24 @@ daysList.children[12].classList.add("friday");
 daysList.children[19].classList.add("friday");
 daysList.children[26].classList.add("friday");
 createInsertChild(buttonsContainer[0], "button", 0, "btn-holiday", "Feriados");
-let active = "no";
+let btnHolidayActive = "no";
 holidayButton[0].addEventListener("click", function () {
-  if (active === "no") {
+  if (btnHolidayActive === "no") {
     for (index = 0; index < holidayDays.length; index += 1) {
       holidayDays[index].style.background = "orange";
     }
-    active = "yes";
-  } else if (active === "yes") {
+    btnHolidayActive = "yes";
+  } else if (btnHolidayActive === "yes") {
     for (index = 0; index < holidayDays.length; index += 1) {
       holidayDays[index].style.background = "rgb(238,238,238)";
     }
-    active = "no";
+    btnHolidayActive = "no";
   }
 });
+createInsertChild(
+  buttonsContainer[0],
+  "button",
+  1,
+  "btn-friday",
+  "Sexta-Feira"
+);
