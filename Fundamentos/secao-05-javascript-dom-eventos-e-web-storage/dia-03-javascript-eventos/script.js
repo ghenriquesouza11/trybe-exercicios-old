@@ -41,3 +41,7 @@ for (index = 0; index < decemberDaysList.length; index += 1) {
 daysList.children[25].classList.add("holiday");
 daysList.children[26].classList.add("holiday");
 daysList.children[32].classList.add("holiday");
+daysList.children[5].classList.add("friday");
+daysList.children[12].classList.add("friday");
+daysList.children[19].classList.add("friday");
+daysList.children[26].classList.add("friday");
