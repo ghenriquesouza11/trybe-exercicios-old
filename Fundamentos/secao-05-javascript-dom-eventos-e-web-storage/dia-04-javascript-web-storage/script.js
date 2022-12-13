@@ -1,19 +1,25 @@
 const body = document.getElementById("body");
 const mainHeaderList = document.getElementsByClassName("main-header__list");
+const clearLocalStorage = document.getElementById("clear-local-storage");
 
 for (index = 1; index < mainHeaderList[0].children.length; index += 1) {
   mainHeaderList[0].children[index].addEventListener("click", function () {
     // Botões para alter a cor de fundo.
     if (event.target === mainHeaderList[0].children[1].children[0]) {
-      body.style.backgroundColor = "white";
+      localStorage.setItem("Cor-de-fundo", "white");
+      body.style.backgroundColor = localStorage.getItem("Cor-de-fundo");
     } else if (event.target === mainHeaderList[0].children[2].children[0]) {
-      body.style.backgroundColor = "black";
+      localStorage.setItem("Cor-de-fundo", "black");
+      body.style.backgroundColor = localStorage.getItem("Cor-de-fundo");
     } else if (event.target === mainHeaderList[0].children[3].children[0]) {
-      body.style.backgroundColor = "green";
+      localStorage.setItem("Cor-de-fundo", "green");
+      body.style.backgroundColor = localStorage.getItem("Cor-de-fundo");
     } else if (event.target === mainHeaderList[0].children[4].children[0]) {
-      body.style.backgroundColor = "blue";
+      localStorage.setItem("Cor-de-fundo", "blue");
+      body.style.backgroundColor = localStorage.getItem("Cor-de-fundo");
     } else if (event.target === mainHeaderList[0].children[5].children[0]) {
-      body.style.backgroundColor = "yellow";
+      localStorage.setItem("Cor-de-fundo", "yellow");
+      body.style.backgroundColor = localStorage.getItem("Cor-de-fundo");
     }
   });
 }
@@ -71,3 +77,10 @@ for (index = 1; index < mainHeaderList[4].children.length; index += 1) {
     }
   });
 }
+if (localStorage.getItem("Cor-de-fundo") !== null) {
+  body.style.backgroundColor = localStorage.getItem("Cor-de-fundo");
+}
+clearLocalStorage.addEventListener("click", function () {
+  localStorage.clear();
+  location.reload();
+});
