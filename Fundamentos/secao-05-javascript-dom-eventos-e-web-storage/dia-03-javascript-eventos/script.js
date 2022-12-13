@@ -32,6 +32,7 @@ const holidayButton = document.getElementsByClassName("btn-holiday");
 const holidayDays = document.getElementsByClassName("holiday");
 const fridayButton = document.getElementsByClassName("btn-friday");
 const fridays = document.getElementsByClassName("friday");
+const day = document.getElementsByClassName("day");
 
 function insertLi(list, times, clss) {
   for (index = 0; index < times; index += 1) {
@@ -94,4 +95,15 @@ fridayButton[0].addEventListener("click", function () {
     fridayButtonActive = "no";
   }
 });
-console.log(daysList.children.length);
+for (index = 0; index < day.length; index += 1) {
+  day[index].addEventListener("mouseover", function () {
+    event.target.style.fontSize = "23px";
+    event.target.style.cursor = "default";
+  });
+}
+for (index = 0; index < day.length; index += 1) {
+  day[index].addEventListener("mouseleave", function () {
+    event.target.style.fontSize = "20px";
+    event.target.style.cursor = "default";
+  });
+}
