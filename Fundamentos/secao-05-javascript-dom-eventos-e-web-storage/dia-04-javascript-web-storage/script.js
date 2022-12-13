@@ -63,15 +63,20 @@ for (index = 1; index < mainHeaderList[3].children.length; index += 1) {
   mainHeaderList[3].children[index].addEventListener("click", function () {
     // Botões para alterar o espaçamento entre linhas
     if (event.target === mainHeaderList[3].children[1].children[0]) {
-      body.style.lineHeight = "1";
+      localStorage.setItem("Espaçamento-entre-linhas", "1");
+      body.style.lineHeight = localStorage.getItem("Espaçamento-entre-linhas");
     } else if (event.target === mainHeaderList[3].children[2].children[0]) {
-      body.style.lineHeight = "normal";
+      localStorage.setItem("Espaçamento-entre-linhas", "normal");
+      body.style.lineHeight = localStorage.getItem("Espaçamento-entre-linhas");
     } else if (event.target === mainHeaderList[3].children[3].children[0]) {
-      body.style.lineHeight = "1.5";
+      localStorage.setItem("Espaçamento-entre-linhas", "1.5");
+      body.style.lineHeight = localStorage.getItem("Espaçamento-entre-linhas");
     } else if (event.target === mainHeaderList[3].children[4].children[0]) {
-      body.style.lineHeight = "2.0";
+      localStorage.setItem("Espaçamento-entre-linhas", "2.0");
+      body.style.lineHeight = localStorage.getItem("Espaçamento-entre-linhas");
     } else if (event.target === mainHeaderList[3].children[5].children[0]) {
-      body.style.lineHeight = "3.0";
+      localStorage.setItem("Espaçamento-entre-linhas", "3.0");
+      body.style.lineHeight = localStorage.getItem("Espaçamento-entre-linhas");
     }
   });
 }
@@ -93,6 +98,9 @@ if (localStorage.getItem("Cor-da-fonte") !== null) {
 }
 if (localStorage.getItem("Tamanho-da-fonte") !== null) {
   body.style.fontSize = localStorage.getItem("Tamanho-da-fonte");
+}
+if (localStorage.getItem("Espaçamento-entre-linhas") !== null) {
+  body.style.lineHeight = localStorage.getItem("Espaçamento-entre-linhas");
 }
 clearLocalStorage.addEventListener("click", function () {
   localStorage.clear();
