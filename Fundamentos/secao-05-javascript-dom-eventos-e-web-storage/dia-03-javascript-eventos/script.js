@@ -179,16 +179,26 @@ for (index = 0; index < day.length; index += 1) {
 }
 let taksRecorded = 0;
 btnAdd.addEventListener("click", function () {
-  const li = document.createElement("li");
-  taskList[0].appendChild(li);
-  taskList[0].children[taksRecorded].innerHTML = taskInput.value;
-  taksRecorded += 1;
-});
-taskInput.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
+  if (taskInput.value === "") {
+    alert("Erro: Nenhum compromisso escrito!");
+  } else {
     const li = document.createElement("li");
     taskList[0].appendChild(li);
     taskList[0].children[taksRecorded].innerHTML = taskInput.value;
     taksRecorded += 1;
+    taskInput.value = "";
+  }
+});
+taskInput.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    if (taskInput.value === "") {
+      alert("Erro: Nenhum compromisso escrito!");
+    } else {
+      const li = document.createElement("li");
+      taskList[0].appendChild(li);
+      taskList[0].children[taksRecorded].innerHTML = taskInput.value;
+      taksRecorded += 1;
+      taskInput.value = "";
+    }
   }
 });
