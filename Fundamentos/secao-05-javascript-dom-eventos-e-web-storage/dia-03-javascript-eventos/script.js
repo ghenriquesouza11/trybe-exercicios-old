@@ -36,6 +36,9 @@ const day = document.getElementsByClassName("day");
 const myTasks = document.getElementsByClassName("my-tasks");
 const task = document.getElementsByClassName("task");
 const selected = document.getElementsByClassName("selected");
+const taskInput = document.getElementById("task-input");
+const btnAdd = document.getElementById("btn-add");
+const taskList = document.getElementsByClassName("task-list");
 
 function insertLi(list, times, clss) {
   for (index = 0; index < times; index += 1) {
@@ -174,3 +177,18 @@ for (index = 0; index < day.length; index += 1) {
     }
   });
 }
+let taksRecorded = 0;
+btnAdd.addEventListener("click", function () {
+  const li = document.createElement("li");
+  taskList[0].appendChild(li);
+  taskList[0].children[taksRecorded].innerHTML = taskInput.value;
+  taksRecorded += 1;
+});
+taskInput.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    const li = document.createElement("li");
+    taskList[0].appendChild(li);
+    taskList[0].children[taksRecorded].innerHTML = taskInput.value;
+    taksRecorded += 1;
+  }
+});
