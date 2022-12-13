@@ -34,7 +34,7 @@ const fridayButton = document.getElementsByClassName("btn-friday");
 const fridays = document.getElementsByClassName("friday");
 const day = document.getElementsByClassName("day");
 const myTasks = document.getElementsByClassName("my-tasks");
-const br = document.createElement("br");
+// const br = document.createElement("br");
 
 function insertLi(list, times, clss) {
   for (index = 0; index < times; index += 1) {
@@ -48,6 +48,13 @@ function createInsertChild(father, child, idx, clss, content) {
   father.appendChild(newElement);
   const kid = father.children[idx];
   kid.innerHTML = content;
+  newElement.classList.add(clss);
+}
+function createInsertChildColor(father, child, idx, clss, color) {
+  const newElement = document.createElement(child);
+  father.appendChild(newElement);
+  const kid = father.children[idx];
+  kid.style.background = color;
   newElement.classList.add(clss);
 }
 insertLi(daysList, decemberDaysList.length, "day");
@@ -109,5 +116,18 @@ for (index = 0; index < day.length; index += 1) {
     event.target.style.cursor = "default";
   });
 }
-createInsertChild(myTasks[0], "span", 1, "task", "Cozinhar");
-createInsertChild(myTasks[0], "span", 2, "task", "Estudar JS");
+createInsertChild(myTasks[0], "span", 1, undefined, "Cozinhar");
+createInsertChildColor(myTasks[0], "div", 2, "task", "green");
+createInsertChild(myTasks[0], "br", 3, undefined, undefined);
+
+createInsertChild(myTasks[0], "span", 4, undefined, "Estudar JS");
+createInsertChildColor(myTasks[0], "div", 5, "task", "orange");
+createInsertChild(myTasks[0], "br", 6, undefined, undefined);
+
+createInsertChild(myTasks[0], "span", 7, undefined, "Estudar música");
+createInsertChildColor(myTasks[0], "div", 8, "task", "lightblue");
+createInsertChild(myTasks[0], "br", 9, undefined, undefined);
+
+createInsertChild(myTasks[0], "span", 10, undefined, "Descansar");
+createInsertChildColor(myTasks[0], "div", 11, "task", "pink");
+createInsertChild(myTasks[0], "br", 12, undefined, undefined);
