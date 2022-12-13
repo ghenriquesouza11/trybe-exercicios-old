@@ -47,7 +47,7 @@ for (index = 1; index < mainHeaderList[2].children.length; index += 1) {
 }
 for (index = 1; index < mainHeaderList[3].children.length; index += 1) {
   mainHeaderList[3].children[index].addEventListener("click", function () {
-    // Botões para alterar o tamanho da fonte
+    // Botões para alterar o espaçamento entre linhas
     if (event.target === mainHeaderList[3].children[1].children[0]) {
       body.style.lineHeight = "1";
     } else if (event.target === mainHeaderList[3].children[2].children[0]) {
@@ -58,6 +58,16 @@ for (index = 1; index < mainHeaderList[3].children.length; index += 1) {
       body.style.lineHeight = "2.0";
     } else if (event.target === mainHeaderList[3].children[5].children[0]) {
       body.style.lineHeight = "3.0";
+    }
+  });
+}
+for (index = 1; index < mainHeaderList[4].children.length; index += 1) {
+  mainHeaderList[4].children[index].addEventListener("click", function () {
+    // Botões para alterar o tipo de fonte
+    if (event.target === mainHeaderList[4].children[1].children[0]) {
+      body.style.fontFamily = "Arial, Helvetica, sans-serif";
+    } else if (event.target === mainHeaderList[4].children[2].children[0]) {
+      body.style.fontFamily = "'Times New Roman', Times, serif";
     }
   });
 }
