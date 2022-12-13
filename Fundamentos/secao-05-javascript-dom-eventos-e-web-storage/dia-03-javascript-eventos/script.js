@@ -35,7 +35,7 @@ const fridays = document.getElementsByClassName("friday");
 const day = document.getElementsByClassName("day");
 const myTasks = document.getElementsByClassName("my-tasks");
 const task = document.getElementsByClassName("task");
-// const br = document.createElement("br");
+const selected = document.getElementsByClassName("selected");
 
 function insertLi(list, times, clss) {
   for (index = 0; index < times; index += 1) {
@@ -140,11 +140,17 @@ for (index = 0; index < task.length; index += 1) {
       event.target.classList.add("selected");
       taskSelected = "yes";
       color = event.target.style.backgroundColor;
+      for (index = 0; index < day.length; index += 1) {
+        day[index].classList.add("x");
+      }
     } else if (event.target.style.backgroundColor === color) {
       for (index = 0; index < task.length; index += 1) {
         task[index].classList.remove("selected");
       }
       taskSelected = "no";
+      for (index = 0; index < day.length; index += 1) {
+        day[index].classList.remove("x");
+      }
     } else if (taskSelected === "yes") {
       for (index = 0; index < task.length; index += 1) {
         task[index].classList.remove("selected");
@@ -152,6 +158,19 @@ for (index = 0; index < task.length; index += 1) {
       }
       event.target.classList.add("selected");
       taskSelected = "yes";
+    }
+  });
+}
+for (index = 0; index < day.length; index += 1) {
+  day[index].addEventListener("click", function () {
+    if (event.target.classList.contains("x") === true) {
+      if (event.target.classList.contains("markedDay") === false) {
+        event.target.style.color = selected[0].style.backgroundColor;
+        event.target.classList.add("markedDay");
+      } else {
+        event.target.style.color = "rgb(119,119,119)";
+        event.target.classList.remove("markedDay");
+      }
     }
   });
 }
