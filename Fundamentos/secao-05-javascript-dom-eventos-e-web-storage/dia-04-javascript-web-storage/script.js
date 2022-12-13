@@ -84,9 +84,11 @@ for (index = 1; index < mainHeaderList[4].children.length; index += 1) {
   mainHeaderList[4].children[index].addEventListener("click", function () {
     // Botões para alterar o tipo de fonte
     if (event.target === mainHeaderList[4].children[1].children[0]) {
-      body.style.fontFamily = "Arial, Helvetica, sans-serif";
+      localStorage.setItem("Tipo-da-fonte", "Arial, Helvetica, sans-serif");
+      body.style.fontFamily = localStorage.getItem("Tipo-da-fonte");
     } else if (event.target === mainHeaderList[4].children[2].children[0]) {
-      body.style.fontFamily = "'Times New Roman', Times, serif";
+      localStorage.setItem("Tipo-da-fonte", "'Times New Roman', Times, serif");
+      body.style.fontFamily = localStorage.getItem("Tipo-da-fonte");
     }
   });
 }
@@ -101,6 +103,9 @@ if (localStorage.getItem("Tamanho-da-fonte") !== null) {
 }
 if (localStorage.getItem("Espaçamento-entre-linhas") !== null) {
   body.style.lineHeight = localStorage.getItem("Espaçamento-entre-linhas");
+}
+if (localStorage.getItem("Tipo-da-fonte") !== null) {
+  body.style.fontFamily = localStorage.getItem("Tipo-da-fonte");
 }
 clearLocalStorage.addEventListener("click", function () {
   localStorage.clear();
