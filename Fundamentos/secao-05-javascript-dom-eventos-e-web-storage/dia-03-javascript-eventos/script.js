@@ -34,6 +34,7 @@ const fridayButton = document.getElementsByClassName("btn-friday");
 const fridays = document.getElementsByClassName("friday");
 const day = document.getElementsByClassName("day");
 const myTasks = document.getElementsByClassName("my-tasks");
+const task = document.getElementsByClassName("task");
 // const br = document.createElement("br");
 
 function insertLi(list, times, clss) {
@@ -131,3 +132,25 @@ createInsertChild(myTasks[0], "br", 9, undefined, undefined);
 createInsertChild(myTasks[0], "span", 10, undefined, "Descansar");
 createInsertChildColor(myTasks[0], "div", 11, "task", "pink");
 createInsertChild(myTasks[0], "br", 12, undefined, undefined);
+let taskSelected = "no";
+let color = "";
+for (index = 0; index < task.length; index += 1) {
+  task[index].addEventListener("click", function () {
+    if (event.target.style.backgroundColor === color) {
+      for (index = 0; index < task.length; index += 1) {
+        task[index].classList.remove("selected");
+      }
+    } else if (taskSelected === "yes") {
+      for (index = 0; index < task.length; index += 1) {
+        task[index].classList.remove("selected");
+      }
+      event.target.classList.add("selected");
+      taskSelected = "yes";
+      color = event.target.style.backgroundColor;
+    } else if (taskSelected === "no") {
+      event.target.classList.add("selected");
+      taskSelected = "yes";
+      color = event.target.style.backgroundColor;
+    }
+  });
+}
