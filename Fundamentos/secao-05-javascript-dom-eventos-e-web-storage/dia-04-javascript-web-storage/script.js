@@ -17,3 +17,15 @@ for (index = 1; index < mainHeaderList[0].children.length; index += 1) {
     }
   });
 }
+for (index = 1; index < mainHeaderList[1].children.length; index += 1) {
+  mainHeaderList[1].children[index].addEventListener("click", function () {
+    // Botões para alterar a cor da fonte
+    if (event.target === mainHeaderList[1].children[1].children[0]) {
+      body.style.color = "black";
+    } else if (event.target === mainHeaderList[1].children[2].children[0]) {
+      body.style.color = "red";
+    } else if (event.target === mainHeaderList[1].children[3].children[0]) {
+      body.style.color = "white";
+    }
+  });
+}
