@@ -42,15 +42,20 @@ for (index = 1; index < mainHeaderList[2].children.length; index += 1) {
   mainHeaderList[2].children[index].addEventListener("click", function () {
     // Botões para alterar o tamanho da fonte
     if (event.target === mainHeaderList[2].children[1].children[0]) {
-      body.style.fontSize = "11px";
+      localStorage.setItem("Tamanho-da-fonte", "11px");
+      body.style.fontSize = localStorage.getItem("Tamanho-da-fonte");
     } else if (event.target === mainHeaderList[2].children[2].children[0]) {
-      body.style.fontSize = "13px";
+      localStorage.setItem("Tamanho-da-fonte", "13px");
+      body.style.fontSize = localStorage.getItem("Tamanho-da-fonte");
     } else if (event.target === mainHeaderList[2].children[3].children[0]) {
-      body.style.fontSize = "16px";
+      localStorage.setItem("Tamanho-da-fonte", "16px");
+      body.style.fontSize = localStorage.getItem("Tamanho-da-fonte");
     } else if (event.target === mainHeaderList[2].children[4].children[0]) {
-      body.style.fontSize = "19px";
+      localStorage.setItem("Tamanho-da-fonte", "19px");
+      body.style.fontSize = localStorage.getItem("Tamanho-da-fonte");
     } else if (event.target === mainHeaderList[2].children[5].children[0]) {
-      body.style.fontSize = "27px";
+      localStorage.setItem("Tamanho-da-fonte", "27px");
+      body.style.fontSize = localStorage.getItem("Tamanho-da-fonte");
     }
   });
 }
@@ -85,6 +90,9 @@ if (localStorage.getItem("Cor-de-fundo") !== null) {
 }
 if (localStorage.getItem("Cor-da-fonte") !== null) {
   body.style.color = localStorage.getItem("Cor-da-fonte");
+}
+if (localStorage.getItem("Tamanho-da-fonte") !== null) {
+  body.style.fontSize = localStorage.getItem("Tamanho-da-fonte");
 }
 clearLocalStorage.addEventListener("click", function () {
   localStorage.clear();
