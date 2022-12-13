@@ -136,21 +136,22 @@ let taskSelected = "no";
 let color = "";
 for (index = 0; index < task.length; index += 1) {
   task[index].addEventListener("click", function () {
-    if (event.target.style.backgroundColor === color) {
+    if (taskSelected === "no") {
+      event.target.classList.add("selected");
+      taskSelected = "yes";
+      color = event.target.style.backgroundColor;
+    } else if (event.target.style.backgroundColor === color) {
       for (index = 0; index < task.length; index += 1) {
         task[index].classList.remove("selected");
       }
+      taskSelected = "no";
     } else if (taskSelected === "yes") {
       for (index = 0; index < task.length; index += 1) {
         task[index].classList.remove("selected");
+        color = event.target.style.backgroundColor;
       }
       event.target.classList.add("selected");
       taskSelected = "yes";
-      color = event.target.style.backgroundColor;
-    } else if (taskSelected === "no") {
-      event.target.classList.add("selected");
-      taskSelected = "yes";
-      color = event.target.style.backgroundColor;
     }
   });
 }
