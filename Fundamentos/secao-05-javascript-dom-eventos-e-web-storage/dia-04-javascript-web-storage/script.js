@@ -27,11 +27,14 @@ for (index = 1; index < mainHeaderList[1].children.length; index += 1) {
   mainHeaderList[1].children[index].addEventListener("click", function () {
     // Botões para alterar a cor da fonte
     if (event.target === mainHeaderList[1].children[1].children[0]) {
-      body.style.color = "black";
+      localStorage.setItem("Cor-da-fonte", "black");
+      body.style.color = localStorage.getItem("Cor-da-fonte");
     } else if (event.target === mainHeaderList[1].children[2].children[0]) {
-      body.style.color = "red";
+      localStorage.setItem("Cor-da-fonte", "red");
+      body.style.color = localStorage.getItem("Cor-da-fonte");
     } else if (event.target === mainHeaderList[1].children[3].children[0]) {
-      body.style.color = "white";
+      localStorage.setItem("Cor-da-fonte", "white");
+      body.style.color = localStorage.getItem("Cor-da-fonte");
     }
   });
 }
@@ -79,6 +82,9 @@ for (index = 1; index < mainHeaderList[4].children.length; index += 1) {
 }
 if (localStorage.getItem("Cor-de-fundo") !== null) {
   body.style.backgroundColor = localStorage.getItem("Cor-de-fundo");
+}
+if (localStorage.getItem("Cor-da-fonte") !== null) {
+  body.style.color = localStorage.getItem("Cor-da-fonte");
 }
 clearLocalStorage.addEventListener("click", function () {
   localStorage.clear();
