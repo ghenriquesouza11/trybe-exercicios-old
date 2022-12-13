@@ -45,3 +45,19 @@ for (index = 1; index < mainHeaderList[2].children.length; index += 1) {
     }
   });
 }
+for (index = 1; index < mainHeaderList[3].children.length; index += 1) {
+  mainHeaderList[3].children[index].addEventListener("click", function () {
+    // Botões para alterar o tamanho da fonte
+    if (event.target === mainHeaderList[3].children[1].children[0]) {
+      body.style.lineHeight = "1";
+    } else if (event.target === mainHeaderList[3].children[2].children[0]) {
+      body.style.lineHeight = "normal";
+    } else if (event.target === mainHeaderList[3].children[3].children[0]) {
+      body.style.lineHeight = "1.5";
+    } else if (event.target === mainHeaderList[3].children[4].children[0]) {
+      body.style.lineHeight = "2.0";
+    } else if (event.target === mainHeaderList[3].children[5].children[0]) {
+      body.style.lineHeight = "3.0";
+    }
+  });
+}
