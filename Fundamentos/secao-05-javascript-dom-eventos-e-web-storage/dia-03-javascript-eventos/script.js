@@ -33,6 +33,8 @@ const holidayDays = document.getElementsByClassName("holiday");
 const fridayButton = document.getElementsByClassName("btn-friday");
 const fridays = document.getElementsByClassName("friday");
 const day = document.getElementsByClassName("day");
+const myTasks = document.getElementsByClassName("my-tasks");
+const br = document.createElement("br");
 
 function insertLi(list, times, clss) {
   for (index = 0; index < times; index += 1) {
@@ -107,3 +109,5 @@ for (index = 0; index < day.length; index += 1) {
     event.target.style.cursor = "default";
   });
 }
+createInsertChild(myTasks[0], "span", 1, "task", "Cozinhar");
+createInsertChild(myTasks[0], "span", 2, "task", "Estudar JS");

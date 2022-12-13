@@ -135,6 +135,10 @@ label {
   vertical-align: middle;
 }
 
+.task {
+  display: block;
+}
+
 .week-days-container {
   margin-left: 35px;
 }
