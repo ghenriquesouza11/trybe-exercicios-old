@@ -1,0 +1,59 @@
+ol li {
+    background: yellow;
+}
+ol li:nth-of-type(even){
+    color: green;
+}
+ol li:nth-of-type(odd){
+    text-transform: uppercase;
+}
+h1, h2, h3, h4, h5, h6{
+    color: red;
+}
+h1 em,
+h2 em,
+h3 em,
+h4 em,
+h5 em,
+h6 em{
+    font-size: 40px;
+    border: 1px solid black;
+}
+li{
+    font-size: 20px;
+}
+li em{
+    font-weight: bold;
+}
+ul:nth-of-type(1)
+li:nth-child(-n+3){
+    color: blue;
+}
+.java{
+    background: pink;
+}
+ul:nth-of-type(2) li:hover:nth-child(1),
+ul:nth-of-type(2) li:hover:nth-child(1) a{
+    font-weight: bold;
+    color: orange;
+}
+ul:nth-of-type(2) li:hover:nth-child(2),
+ul:nth-of-type(2) li:hover:nth-child(2) a{
+    font-weight: bold;
+    color: green;
+}
+ul:nth-of-type(2) li:hover:nth-child(3),
+ul:nth-of-type(2) li:hover:nth-child(3) a{
+    font-weight: bold;
+    color: black;
+}
+ul:nth-of-type(2) li:hover:nth-child(4),
+ul:nth-of-type(2) li:hover:nth-child(4) a{
+    font-weight: bold;
+    color: yellow;
+}
+ul:nth-of-type(2) li:hover:nth-child(5),
+ul:nth-of-type(2) li:hover:nth-child(5) a{
+    font-weight: bold;
+    color: green;
+}
