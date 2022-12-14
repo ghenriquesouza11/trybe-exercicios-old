@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-header__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 70px;
+  border: solid 2px lightgreen;
+  margin: 10px 20px;
+}
+
+.main-header__list-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.main-header__list {
+  list-style: none;
+}
+
+.main-header__item button {
+  width: 100%;
+}
+
+.main-header__item h3 {
+  margin: 0 auto;
+}
+.section__title {
+  text-align: center;
+}
+
+.section__subtitle {
+  text-align: center;
+  margin: 10px 0;
+}
+p {
+  text-align: center;
+}
