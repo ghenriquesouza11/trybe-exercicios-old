@@ -8,6 +8,58 @@
     <title>Document</title>
   </head>
   <body>
-    <script src="./script.js"></script>
+    <header>Hader da página</header>
+    <section>
+      <div id="form">
+      <form method="get">
+        <div>
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <br />
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" />
+        </div>
+        <br />
+        <div class="options">
+          <label for="">Opção 1</label>
+          <input type="radio" name="option" />
+        </div>
+        <div class="options">
+          <label for="">Opção 2</label>
+          <input type="radio" name="option" />
+        </div>
+        <div class="options">
+          <label for="">Opção 3</label>
+          <input type="radio" name="option" />
+        </div>
+        <div class="options">
+          <label for="">Opção 4</label>
+          <input type="radio" name="option" />
+        </div>
+        <br />
+        <div>
+          <h3>Espaço para digitar a resposta:</h3>
+          <textarea name="" id="textarea" cols="40" rows="10"></textarea>
+        </div>
+        <div>
+          <label for="date">Data:</label>
+          <input type="date" name="date" />
+        </div>
+        <div>
+          <label for="agree1">Concordo 1</label>
+          <input type="checkbox" name="agree1" />
+        </div>
+        <div>
+          <label for="agree2">Concordo 2</label>
+          <input type="checkbox" name="agree2" />
+        </div>
+      </div>
+        <button type="reset">Apagar</button>
+        <button type="submit">Enviar</button>
+      </form>
+      <script src="./script.js"></script>
+    </section>
   </body>
 </html>
