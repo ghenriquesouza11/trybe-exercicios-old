@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>Header da página</header>
+    <section>
+      <div id="form">
+      <form method="get">
+        <div>
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" minlength="10" maxlength="40"/>
+        </div>
+        <br />
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" minlength="10" maxlength="50"/>
+        </div>
+        <br />
+        <h3>Destino Preferido</h3>
+        <div class="options">
+          <label for="option1">Cidade</label>
+          <input type="radio" name="option1" />
+        </div>
+        <div class="options">
+          <label for="option2">Campo</label>
+          <input type="radio" name="option2" />
+        </div>
+        <div class="options">
+          <label for="option3">Praia</label>
+          <input type="radio" name="option3" />
+        </div>
+        <div class="options">
+          <label for="option4">Montanhas</label>
+          <input type="radio" name="option4" />
+        </div>
+        <br />
+        <div>
+          <h3>Espaço para digitar a resposta:</h3>
+          <textarea name="" id="textarea" cols="40" rows="10"></textarea maxlength="500">
+        </div>
+        <div>
+          <label for="date">Data:</label>
+          <input type="date" name="date" />
+        </div>
+        <div>
+          <label for="agree1">Concordo 1</label>
+          <input type="checkbox" name="agree1"  id="agree1" required oninvalid="this.setCustomValidity('Concorda aqui rapidão')" oninput="this.setCustomValidity('')"/>
+        </div>
+        <div>
+          <label for="agree2">Concordo 2</label>
+          <input type="checkbox" name="agree2"  id="agree2" required oninvalid="this.setCustomValidity('Concorda aqui rapidão')" oninput="this.setCustomValidity('')"/>
+        </div>
+      </div>
+        <button type="reset" class="button">Apagar</button>
+        <button type="submit" class="button" id="submit-btn">Enviar</button>
+      </form>
+      <script src="./script.js"></script>
+    </section>
+  </body>
+</html>
