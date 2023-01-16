@@ -49,15 +49,15 @@
         </div>
         <div>
           <label for="agree1">Concordo 1</label>
-          <input type="checkbox" name="agree1" />
+          <input type="checkbox" name="agree1"  id="agree1" required oninvalid="this.setCustomValidity('Concorda aqui rapidão')" oninput="this.setCustomValidity('')"/>
         </div>
         <div>
           <label for="agree2">Concordo 2</label>
-          <input type="checkbox" name="agree2" />
+          <input type="checkbox" name="agree2"  id="agree2" required oninvalid="this.setCustomValidity('Concorda aqui rapidão')" oninput="this.setCustomValidity('')"/>
         </div>
       </div>
         <button type="reset" class="button">Apagar</button>
-        <button type="submit" class="button">Enviar</button>
+        <button type="submit" class="button" id="submit-btn">Enviar</button>
       </form>
       <script src="./script.js"></script>
     </section>
