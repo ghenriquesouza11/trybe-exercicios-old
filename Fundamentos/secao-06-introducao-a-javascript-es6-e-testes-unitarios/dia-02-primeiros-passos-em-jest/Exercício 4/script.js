@@ -10,6 +10,7 @@ function techList(array, string) {
     }
     return technologies;
   }
+  return null;
 }
 techList([], 'ola');
 module.exports = techList;
